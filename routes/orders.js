@@ -8,8 +8,14 @@ router.get('/', (req, res, next) => {
 })
 
 router.post('/', (req, res, next) => {
+    const order = {
+        product_id: req.body.product_id,
+        quantity: req.body.quantity
+    }
+
     res.status(201).send({
-        message: 'Adiciona um Pedido'
+        message: 'Adiciona um Pedido',
+        created_order: order
     })
 })
 
