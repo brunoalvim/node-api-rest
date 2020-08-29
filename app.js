@@ -7,6 +7,7 @@ const rotaProdutos = require('./routes/products')
 const rotaPedidos  = require('./routes/orders')
 
 app.use(morgan('dev'))
+app.use('/uploads', express.static('uploads'));
 app.use(bodyParser.urlencoded({ extended: false }))
 app.use(bodyParser.json())
 
