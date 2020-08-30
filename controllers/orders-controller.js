@@ -30,7 +30,7 @@ exports.getOrders = (req, res, next) => {
                             request: {
                                 type: 'GET',
                                 description: 'Retorna um pedido específico.',
-                                url: 'http://localhost:3000/orders/' + order.order_id
+                                url: process.env.URL_API + 'orders/' + order.order_id
                             }
                         }
                     })
@@ -67,7 +67,7 @@ exports.getOrder = (req, res, next) => {
                         request: {
                             type: 'GET',
                             description: 'Retorna todos os pedidos.',
-                            url: 'http://localhost:3000/orders/'
+                            url: process.env.URL_API + 'orders'
                         }
                     }
                 }
@@ -113,7 +113,7 @@ exports.postOrder = (req, res, next) => {
                         request: {
                             type: 'GET',
                             description: 'Retorna um pedido específico.',
-                            url: 'http://localhost:3000/orders/' + id
+                            url: process.env.URL_API + 'orders/' + id
                         }
                     }
                 }
@@ -151,7 +151,7 @@ exports.patchOrder = (req, res, next) => {
                         request: {
                             type: 'GET',
                             description: 'Retorna um pedido específico.',
-                            url: 'http://localhost:3000/orders/' + req.body.order_id
+                            url: process.env.URL_API + 'orders/' + req.body.order_id
                         }
                     }
                 }
@@ -180,7 +180,7 @@ exports.deleteOrder = (req, res, next) => {
                     request: {
                         type: 'POST',
                         description: 'Insere um novo pedido.',
-                        url: 'http://localhost:3000/orders',
+                        url: process.env.URL_API + 'orders',
                         body: {
                             product_id: 'Number',
                             quantity: 'Number'
