@@ -1,0 +1,39 @@
+# Retorna todos os produtos
+GET http://localhost:3000/products/
+Content-Type: application/json
+###
+
+# Retorna um produto específico
+GET http://localhost:3000/products/2
+Content-Type: application/json
+###
+
+# Adiciona um produto
+POST http://localhost:3000/products
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoxLCJlbWFpbCI6ImJhbHZpbUBob3RtYWlsLmNvbSIsImlhdCI6MTU5ODgyMDc5MSwiZXhwIjoxNTk4ODI0MzkxfQ.K6qNprzqwmUf44r-QeBrnDz9qiozwdgbOoWKSPvramk
+
+{
+    "name": "Película Glass - Samsung S8",
+    "price": 29.98,
+    "image": "image.jpg"
+}
+###
+
+# Altera um produto específico
+PATCH http://localhost:3000/products/1
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoxLCJlbWFpbCI6ImJhbHZpbUBob3RtYWlsLmNvbSIsImlhdCI6MTU5ODgyMDc5MSwiZXhwIjoxNTk4ODI0MzkxfQ.K6qNprzqwmUf44r-QeBrnDz9qiozwdgbOoWKSPvramk
+
+{
+    "name": "Película Glass - Samsung S8",
+    "price": 29.98,
+    "image": "image.jpg"
+}
+###
+
+# Remove um produto
+DELETE http://localhost:3000/products/3
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoxLCJlbWFpbCI6ImJhbHZpbUBob3RtYWlsLmNvbSIsImlhdCI6MTU5ODgyMDc5MSwiZXhwIjoxNTk4ODI0MzkxfQ.K6qNprzqwmUf44r-QeBrnDz9qiozwdgbOoWKSPvramk
+###

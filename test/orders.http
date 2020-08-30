@@ -1,0 +1,38 @@
+# Retorna todos os pedidos
+GET http://localhost:3000/orders
+Content-Type: application/json
+###
+
+# Retorna um pedido específico 
+GET http://localhost:3000/orders/1
+Content-Type: application/json
+###
+
+# Adiciona um pedido
+POST http://localhost:3000/orders
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoxLCJlbWFpbCI6ImJhbHZpbUBob3RtYWlsLmNvbSIsImlhdCI6MTU5ODgyMDc5MSwiZXhwIjoxNTk4ODI0MzkxfQ.K6qNprzqwmUf44r-QeBrnDz9qiozwdgbOoWKSPvramk
+
+{
+    "product_id": 1,
+    "quantity": 2
+}
+###
+
+# Altera um pedido específico
+POST http://localhost:3000/orders
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoxLCJlbWFpbCI6ImJhbHZpbUBob3RtYWlsLmNvbSIsImlhdCI6MTU5ODgyMDc5MSwiZXhwIjoxNTk4ODI0MzkxfQ.K6qNprzqwmUf44r-QeBrnDz9qiozwdgbOoWKSPvramk
+
+{
+    "order_id": 2
+    "product_id": 6,
+    "quantity": 1
+}
+###
+
+# Remove an order
+DELETE http://localhost:3000/orders/2
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoxLCJlbWFpbCI6ImJhbHZpbUBob3RtYWlsLmNvbSIsImlhdCI6MTU5ODgyMDc5MSwiZXhwIjoxNTk4ODI0MzkxfQ.K6qNprzqwmUf44r-QeBrnDz9qiozwdgbOoWKSPvramk
+###
