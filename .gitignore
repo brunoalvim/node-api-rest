@@ -103,5 +103,5 @@ dist
 # TernJS port file
 .tern-port
 
+!uploads/gitseek
 uploads/
-!uploads/.gitseek
